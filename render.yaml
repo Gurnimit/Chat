@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: velvet-chat-backend
+    env: node
+    region: singapore # or oregon, frankfurt, etc.
+    buildCommand: cd server && npm install && npm run build
+    startCommand: cd server && npm start
+    healthCheckPath: /api/observability/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        sync: false # Set in Render Dashboard or connection string
+      - key: ACCESS_TOKEN_SECRET
+        generateValue: true
+      - key: REFRESH_TOKEN_SECRET
+        generateValue: true
+      - key: ALLOWED_ORIGINS
+        value: "https://velvet-chat-backend.onrender.com,https://localhost,http://localhost"

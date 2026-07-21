@@ -1,0 +1,11 @@
+﻿
+> chat-app-server@1.0.0 start
+> node dist/index.js
+
+Database connected successfully.
+Server is running on port 5000
+Socket server initialized.
+User connected: 6df15926-72ed-49b2-b7bb-80b9ced4fe53 (Socket: EbCNX0qV53Mhoy3bAAAC)
+User connected: 0771c08d-6b52-438b-bb2e-5e5ed169b55a (Socket: 25QZ_th69OxFOGYtAAAD)
+User disconnected: 6df15926-72ed-49b2-b7bb-80b9ced4fe53 (Socket: EbCNX0qV53Mhoy3bAAAC)
+User disconnected: 0771c08d-6b52-438b-bb2e-5e5ed169b55a (Socket: 25QZ_th69OxFOGYtAAAD)

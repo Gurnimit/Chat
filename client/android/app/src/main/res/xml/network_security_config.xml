@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">onrender.com</domain>
+        <domain includeSubdomains="true">velvet-chat-backend.onrender.com</domain>
+        <domain includeSubdomains="true">velvetchat.app</domain>
+        <domain includeSubdomains="true">api.velvetchat.app</domain>
+        <domain includeSubdomains="true">172.16.243.96</domain>
+        <domain includeSubdomains="true">10.114.9.121</domain>
+        <domain includeSubdomains="true">10.0.2.2</domain>
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">127.0.0.1</domain>
+    </domain-config>
+</network-security-config>

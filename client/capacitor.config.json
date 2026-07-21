@@ -1,0 +1,11 @@
+{
+  "appId": "com.velvet.chat",
+  "appName": "Velvet Chat",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "http",
+    "allowNavigation": [
+      "*"
+    ]
+  }
+}

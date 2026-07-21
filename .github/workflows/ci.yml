@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  server:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install server dependencies
+        run: cd server && npm ci
+      - name: Generate Prisma client
+        run: cd server && npx prisma generate
+      - name: Type check
+        run: cd server && npx tsc --noEmit
+      - name: Build
+        run: cd server && npm run build
+
+  client:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install client dependencies
+        run: cd client && npm ci
+      - name: Type check
+        run: cd client && npx tsc --noEmit
+      - name: Build
+        run: cd client && npm run build

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Velvet Chat</string>
+    <string name="title_activity_main">Velvet Chat</string>
+    <string name="package_name">com.velvet.chat</string>
+    <string name="custom_url_scheme">com.velvet.chat</string>
+</resources>
